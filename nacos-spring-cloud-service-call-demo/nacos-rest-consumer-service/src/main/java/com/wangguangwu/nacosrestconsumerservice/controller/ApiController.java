@@ -21,6 +21,8 @@ public class ApiController {
 
     @GetMapping("/callService")
     public String callService() {
+        // 通过 ServiceRandomConfiguration 类给服务 nacos-provider-service 配置为 随机策略。
+        // 默认策略是 轮询策略。
         return restTemplate.getForObject(SERVICE_NAME + "/api/callService", String.class);
     }
 }
