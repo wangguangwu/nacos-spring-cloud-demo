@@ -22,4 +22,9 @@ public class ApiController {
     public String callService() {
         return "Hello, I'm " + applicationName + ". I'm from port:" + serverPort;
     }
+
+    @GetMapping("/callException")
+    public void callException() {
+        throw new RuntimeException();
+    }
 }
