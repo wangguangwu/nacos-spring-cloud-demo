@@ -13,6 +13,7 @@
     <modules>
         <module>nacos-spring-cloud-config-demo</module>
         <module>nacos-spring-cloud-discovery-demo</module>
+        <module>nacos-spring-cloud-service-call-demo</module>
     </modules>
 
     <properties>
