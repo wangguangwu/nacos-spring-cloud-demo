@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @author wangguangwu
  */
@@ -20,6 +22,16 @@ public class ApiController {
 
     @GetMapping("/callService")
     public String callService() {
+        return "Hello, I'm " + applicationName + ". I'm from port:" + serverPort;
+    }
+
+    @GetMapping("/callServiceWait")
+    public String callServiceWait() {
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            // ignore
+        }
         return "Hello, I'm " + applicationName + ". I'm from port:" + serverPort;
     }
 

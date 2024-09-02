@@ -19,5 +19,6 @@
         <module>nacos-provider-service-02</module>
         <module>nacos-rest-consumer-service</module>
         <module>nacos-feign-consumer-service</module>
+        <module>nacos-custom-strategy-consumer-service</module>
     </modules>
 </project>
