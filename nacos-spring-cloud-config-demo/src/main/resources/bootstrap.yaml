@@ -1,9 +1,32 @@
+#spring:
+#  application:
+#    name: config
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: ${NACOS_SERVER_ADDR}
+#        namespace: ${NACOS_NAMESPACE}
+#        group: ${NACOS_GROUP}
+#        username: ${NACOS_USERNAME}
+#        password: ${NACOS_PASSWORD}
+#        file-extension: properties
+
 spring:
   application:
-    name: nacos-config-demo
+    name: config
   cloud:
     nacos:
       config:
-        server-addr: 127.0.0.1:8848
-        file-extension: yaml
-        group: DEFAULT_GROUP
+        server-addr: ${NACOS_SERVER_ADDR}  # Nacos 服务器地址
+        namespace: ${NACOS_NAMESPACE}      # Nacos 命名空间
+        username: ${NACOS_USERNAME}        # Nacos 用户名
+        password: ${NACOS_PASSWORD}        # Nacos 密码
+        file-extension: properties         # 配置文件扩展名
+        group: DEV_GROUP               # 默认组名
+        extension-configs:
+          - data-id: ${spring.application.name}.properties
+            group: DEV_GROUP            # 基础配置
+            refresh: true
+          - data-id: ${spring.application.name}-${spring.profiles.active}.properties
+            group: DEV_GROUP            # 环境特定配置，根据激活的 profile 加载
+            refresh: true

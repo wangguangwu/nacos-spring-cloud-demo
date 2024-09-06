@@ -37,4 +37,39 @@
             <version>${spring-cloud-starter-bootstrap.version}</version>
         </dependency>
     </dependencies>
+
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>dev</id>-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
+<!--            <properties>-->
+<!--                <spring.profiles.active>dev</spring.profiles.active>-->
+<!--                <NACOS_GROUP>DEV_GROUP</NACOS_GROUP>-->
+<!--                <NACOS_NAMESPACE>19c63779-ecad-42c3-a6d2-7257202e0120</NACOS_NAMESPACE>-->
+<!--                <NACOS_SERVER_ADDR>wangguangwu.com:8848</NACOS_SERVER_ADDR>-->
+<!--            </properties>-->
+<!--        </profile>-->
+
+<!--        <profile>-->
+<!--            <id>test</id>-->
+<!--            <properties>-->
+<!--                <spring.profiles.active>test</spring.profiles.active>-->
+<!--                <NACOS_GROUP>TEST_GROUP</NACOS_GROUP>-->
+<!--                <NACOS_NAMESPACE>19c63779-ecad-42c3-a6d2-7257202e0120</NACOS_NAMESPACE>-->
+<!--                <NACOS_SERVER_ADDR>wangguangwu.com:8848</NACOS_SERVER_ADDR>-->
+<!--            </properties>-->
+<!--        </profile>-->
+
+<!--        <profile>-->
+<!--            <id>prod</id>-->
+<!--            <properties>-->
+<!--                <spring.profiles.active>prod</spring.profiles.active>-->
+<!--                <NACOS_GROUP>PRO_GROUP</NACOS_GROUP>-->
+<!--                <NACOS_NAMESPACE>19c63779-ecad-42c3-a6d2-7257202e0120</NACOS_NAMESPACE>-->
+<!--                <NACOS_SERVER_ADDR>wangguangwu.com:8848</NACOS_SERVER_ADDR>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 </project>
